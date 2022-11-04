@@ -12,7 +12,7 @@ const mainRoutes = require('./routes/main');
 const portfolioRoutes = require('./routes/portfolio');
 
 //Use .env file in config folder
-require('dotenv').config({path: './config/.env'});
+require("dotenv").config({path: './config/.env'});
 console.log(process.env.DB_STRING);
 
 // Passport config
@@ -63,6 +63,6 @@ app.use('/portfolio', portfolioRoutes)
 
 //Server Running
 
-app.listen(process.env.PORT, ()=>{
+app.listen(process.env.PORT || 3000, ()=>{
     console.log('Server is running, you better catch it on !')
 })    
